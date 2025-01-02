@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 #include<conio.h>
+
 using namespace std;
 
 // Data structure for student Management (using queue)
@@ -29,7 +30,7 @@ struct Faculty
     string email;
 };
 
-//STL
+//STL instead of doing  manually
 queue<student>studentQueue;
 stack<Faculty>facultyStack;
 
@@ -40,8 +41,8 @@ void login()
 {
     int attemps=0;
     string uname,pass;
-    string user_name="admin";
-    string password="admin";
+    string user_name="SEU_CSE";
+    string password="SEU_CSE";
     do
     {
         system("cls");
@@ -121,6 +122,7 @@ Course_node* addcourse(Course_node* root,string course_name,string course_code)
     return root;
 }
 
+
 //inorder travarsal for course Management
 void printcourse(Course_node *root)
 {
@@ -132,6 +134,7 @@ void printcourse(Course_node *root)
     cout << "Course Name: " << root->course_name << " | Course Code: " << root->course_code << endl;
     printcourse(root->right);
 }
+
 
 // Function to add a student to the queue (Student Registration)
 void register_student()
@@ -156,6 +159,7 @@ void register_student()
     cout << "Student registered successfully!" << endl;
 }
 
+
 // Function to manage faculty (using Stack)
 void manageFaculty()
 {
@@ -171,6 +175,7 @@ void manageFaculty()
     cout << "Faculty added successfully!" << endl;
 }
 
+
 // Function to view faculty details (Pop faculty from stack)
 void veiwfaculty()
 {
@@ -183,6 +188,7 @@ void veiwfaculty()
     cout<<"Faculty name : "<<f.name<<" | Department : "<<f.department<<" | Email : "<<f.email<<endl;
     facultyStack.pop();
 }
+
 
 // Main menu function
 void mainmenu()
@@ -215,6 +221,8 @@ void mainmenu()
     cout << string((width - prompt.length()) / 2, ' ') << prompt;
 }
 
+
+
 //print the student in the queue
 void veiwstudent()
 {
@@ -236,8 +244,7 @@ void veiwstudent()
     }
 }
 
-
-int main()
+void ums()
 {
     login();
     int choice;
@@ -285,4 +292,14 @@ int main()
         }
     }
     while(choice!=7);
+    system("CLS");
+    printf("\t----------------------------------------------------------------------------------------------------------\n");
+    printf("\t\t\t\t\tThank You For Using UMS SEU\t\t\t\t\t\t\n");
+    printf("\t----------------------------------------------------------------------------------------------------------\n");
+    getch();
+}
+
+int main()
+{
+    ums();
 }
