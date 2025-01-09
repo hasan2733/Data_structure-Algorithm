@@ -48,7 +48,7 @@ void hepifyDOWN(MAXHEAP * h,int index)
     h->data[index] = h->data[largest];
     h->data[largest] = temp;   
     
-    hepifyDOWN(h,index);
+    hepifyDOWN(h,largest);
   }
 }
 
